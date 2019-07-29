@@ -1,0 +1,307 @@
+.header {
+  background: url("../img/header-bg.png") no-repeat center/cover;
+  padding: 20px 0;
+
+  @include mq(lg) {
+    padding: 20px 0 40px;
+  }
+
+  @include mq(xs) {
+    overflow-x: hidden;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-between);
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      position: relative;
+    }
+
+    &-img {
+      padding: 0 15px;
+      width: 50%;
+      position: relative;
+      z-index: 9;
+
+      @include mq(md) {
+        width: 100%;
+      }
+
+      .logo {
+
+        @include mq(xs) {
+          width: 199px;
+          margin: 0 auto;
+        }
+
+        img {
+          margin: 0;
+
+          @include mq(md) {
+            margin: 0 auto;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+          }
+        }
+      }
+
+      .photo {
+        padding: 35px 0 30px;
+
+        @include mq(md) {
+          position: absolute;
+          top: 350px;
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
+
+        @include mq(s) {
+          width: 100%;
+          top: 380px;
+        }
+
+        @include mq(xs) {
+          top: 230px;
+        }
+
+        img {
+
+          @include mq(lg) {
+            width: 600px;
+          }
+
+          @include mq(s) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &-text {
+      width: 50%;
+      padding: 75px 0 0;
+      position: relative;
+      z-index: 9;
+
+      @include mq(md) {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        @include flex;
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+      }
+
+      @include mq(s) {
+        @include justify-content(left);
+      }
+
+      .price {
+        padding-left: 70px;
+        margin: 10px 0;
+
+        @include mq(s) {
+          padding-left: 20px;
+          text-align: left;
+        }
+
+        @include mq(xs) {
+          padding-left: 0;
+        }
+      }
+
+      .sale {
+        margin: 45px 0 60px 260px;
+
+        @include mq(lg) {
+          margin: 45px 0 35px 200px;
+        }
+
+        @include mq(lg) {
+          margin: 45px 0 35px 130px;
+        }
+
+        @include mq(s) {
+          margin: 0 auto;
+          text-align: right;
+          padding-right: 20px;
+          width: 100%;
+        }
+
+        @include mq(xs) {
+          padding-right: 0;
+        }
+      }
+
+      .links {
+        margin: 0 0 0 220px;
+
+        @include mq(lg) {
+          margin: 0 0 0 100px;
+        }
+
+        @include mq(md) {
+          margin: 425px auto 0;
+        }
+
+        @include mq(s) {
+          margin: 550px auto 0;
+        }
+
+        @include mq(xs) {
+          margin: 100% auto 0;
+        }
+      }
+    }
+  }
+
+  &__paralax {
+
+    &-first {
+      width: 165px;
+      height: 65px;
+      background: url("../img/paralax/header-first.png") no-repeat center/cover;
+      position: absolute;
+      top: -20px;
+      left: 385px;
+
+      @include mq(md) {
+        left: 15px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-second {
+      width: 95px;
+      height: 83px;
+      background: url("../img/paralax/header-second.png") no-repeat center/cover;
+      position: absolute;
+      top: -20px;
+      right: 65px;
+
+      @include mq(s) {
+        right: 0;
+      }
+
+      @include mq(xs) {
+        width: 55px;
+        height: 50px;
+      }
+    }
+
+    &-third {
+      width: 207px;
+      height: 147px;
+      background: url("../img/paralax/header-third.png") no-repeat center/cover;
+      position: absolute;
+      top: 80px;
+      left: 250px;
+      z-index: 11;
+
+      @include mq(md) {
+        display: none;
+      }
+
+      @include mq(s) {
+        display: block;
+        top: -75px;
+        left: -130px;
+      }
+
+      @include mq(xs) {
+        width: 185px;
+        height: 135px;
+      }
+    }
+
+    &-fourth {
+      width: 141px;
+      height: 137px;
+      background: url("../img/paralax/header-fourth.png") no-repeat center/cover;
+      position: absolute;
+      top: 310px;
+      left: -60px;
+
+      @include mq(lg) {
+        display: none;
+      }
+    }
+
+    &-fifth {
+      width: 153px;
+      height: 95px;
+      background: url("../img/paralax/header-fifth.png") no-repeat center/cover;
+      position: absolute;
+      top: 335px;
+      left: 500px;
+
+      @include mq(lg) {
+        top: 355px;
+      }
+
+      @include mq(md) {
+        left: 320px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-sixth {
+      width: 77px;
+      height: 65px;
+      background: url("../img/paralax/header-sixth.png") no-repeat center/cover;
+      position: absolute;
+      top: 250px;
+      right: -45px;
+
+      @include mq(lg) {
+        right: 0;
+      }
+
+      @include mq(s) {
+        top: 410px;
+      }
+
+      @include mq(xs) {
+        top: 250px;
+        right: -35px;
+      }
+    }
+
+    &-seventh {
+      width: 134px;
+      height: 128px;
+      background: url("../img/paralax/header-seventh.png") no-repeat center/cover;
+      position: absolute;
+      top: 445px;
+      right: -65px;
+
+      @include mq(lg) {
+        top: 400px;
+        right: 0;
+      }
+
+      @include mq(md) {
+        top: 625px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,2321 @@
+.advantages {
+  padding: 0 0 40px;
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    background: #e2e9c0;
+    @include border-radius(5px);
+    padding: 20px 50px 25px;
+    margin: -20px auto 0;
+    @include flex;
+    @include justify-content(space-between);
+    position: relative;
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      @include box-sizing(border-box);
+      width: 90%;
+    }
+
+    @include mq(s) {
+      padding: 20px 50px;
+      overflow-x: hidden;
+    }
+
+    @include mq(xs) {
+      width: 100%;
+      padding: 20px 10px;
+    }
+
+    &-scroll {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      @include transform(translateX(-50%));
+
+      a {
+        display: block;
+        width: 41px;
+        height: 40px;
+        background: url("../img/scroll.png") no-repeat center/cover;
+      }
+    }
+
+    &-text {
+      width: 573px;
+      @include flex;
+      @include justify-content(space-between);
+      @include flex-wrap(wrap);
+      padding-top: 95px;
+
+      @include mq(xs) {
+        padding-top: 35px;
+      }
+
+      &-block {
+        width: 230px;
+
+        @include mq(s) {
+          width: 100%;
+          margin: 20px auto;
+        }
+
+        p {
+          font-family: $fd, sans-serif;
+          font-size: 20px;
+          color: #1e0f1c;
+          text-transform: uppercase;
+
+          @include mq(s) {
+            text-align: center;
+          }
+        }
+
+        .image {
+          @include box-sizing(border-box);
+          height: 70px;
+          position: relative;
+
+          @include mq(s) {
+            margin: 10px auto;
+          }
+
+          &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+          }
+
+          &.star {
+
+            &:after {
+              width: 56px;
+              height: 53px;
+              background: url("../img/star.png") no-repeat center/cover;
+            }
+          }
+
+          &.crown {
+
+            &:after {
+              width: 67px;
+              height: 58px;
+              background: url("../img/crown.png") no-repeat center/cover;
+            }
+          }
+
+          &.smile {
+
+            &:after {
+              width: 52px;
+              height: 52px;
+              background: url("../img/smile.png") no-repeat center/cover;
+            }
+          }
+
+          &.boot {
+
+            &:after {
+              width: 56px;
+              height: 52px;
+              background: url("../img/boot.png") no-repeat center/cover;
+            }
+          }
+        }
+
+        span {
+          display: block;
+          font-family: $fb, sans-serif;
+          font-size: 18px;
+          color: #222222;
+        }
+
+        &:first-child {
+          margin-bottom: 75px;
+
+          @include mq(s) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    &-img {
+      width: 392px;
+      position: relative;
+      z-index: 9;
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      .image {
+        position: absolute;
+        top: 55px;
+        left: 0;
+
+        @include mq(lg) {
+          width: 370px;
+          left: 25px;
+        }
+
+        @include mq(md) {
+          position: static;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+        }
+
+        img {
+          @include mq(lg) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      @include transform(translateY(-50%));
+      width: 556px;
+      height: 552px;
+      background: url("../img/advantages__block-bg.png") no-repeat center/cover;
+
+      @include mq(md) {
+        top: 0;
+        @include transform(none);
+      }
+
+      @include mq(s) {
+        left: 0;
+      }
+    }
+  }
+
+  &__paralax {
+    position: absolute;
+
+    &.first {
+      width: 130px;
+      height: 117px;
+      background: url("../img/paralax/advantages-first.png") no-repeat center/cover;
+      top: -15px;
+      left: -45px;
+
+      @include mq(lg) {
+        left: 10px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &.second {
+      width: 197px;
+      height: 181px;
+      background: url("../img/paralax/advantages-second.png") no-repeat center/cover;
+      top: 130px;
+      right: 15px;
+
+      @include mq(md) {
+        top: 675px;
+        left: 65%;
+        @include transform(translateX(-65%));
+      }
+
+      @include mq(s) {
+        top: 1145px;
+      }
+
+      @include mq(xs) {
+        top: 1100px;
+      }
+    }
+  }
+}
+
+.about {
+  padding: 55px 0 50px;
+
+  @include mq(s) {
+    padding: 20px 0;
+    overflow-x: hidden;
+  }
+
+  &__video {
+    @include flex;
+    @include justify-content(space-between);
+    padding: 0 0 80px;
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+    }
+
+    &-video {
+      width: 570px;
+      height: 329px;
+      position: relative;
+
+      @include mq(lg) {
+        width: 440px;
+      }
+
+      @include mq(md) {
+        width: 80%;
+        margin: 0 auto 60px;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+        height: 168px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 9;
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        background: transparent;
+        @include box-sizing(border-box);
+        border: 10px solid #e2e9c0;
+        width: 570px;
+        height: 329px;
+        position: absolute;
+        top: 40px;
+        left: -40px;
+
+        @include mq(lg) {
+          width: 440px;
+          left: 20px;
+        }
+
+        @include mq(md) {
+          width: 100%;
+          left: -40px;
+        }
+
+        @include mq(xs) {
+          height: 100%;
+          left: -8px;
+          border: 5px solid #e2e9c0;
+        }
+      }
+
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 235px;
+        right: -220px;
+        width: 301px;
+        height: 196px;
+        background: url("../img/video-arrow.png") no-repeat center/cover;
+
+        @include mq(md) {
+          display: none;
+        }
+      }
+    }
+
+    &-text {
+      width: 525px;
+      position: relative;
+      z-index: 9;
+      padding: 5px 0 0;
+
+      @include mq(lg) {
+        width: 450px;
+      }
+
+      p {
+        font-family: $fb, sans-serif;
+        font-size: 18px;
+        color: #fff;
+        text-align: justify;
+      }
+
+      .links {
+        margin: 50px 0 0 210px;
+
+        @include mq(lg) {
+          margin: 50px 0 0 160px;
+        }
+
+        @include mq(md) {
+          margin: 50px auto 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__gallery {
+    padding: 40px 0 50px;
+    @include flex;
+    @include justify-content(space-between);
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+    }
+
+    &-text {
+      width: 430px;
+
+      @include mq(lg) {
+        width: 325px;
+      }
+
+      @include mq(md) {
+        @include order(2);
+        width: 430px;
+        padding-top: 70px;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      .images {
+        @include flex;
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+
+        .slick-list.draggable {
+          padding: 0 !important;
+        }
+
+        .slick-track {
+          width: 100% !important;
+          transform: none !important;
+        }
+
+        .image {
+          width: 123px !important;
+          height: 88px;
+          position: relative;
+          cursor: pointer;
+          outline: none;
+          margin: 5px 0;
+
+          @include mq(lg) {
+            width: 95px !important;
+            height: 65px;
+          }
+
+          @include mq(md) {
+            width: 123px !important;
+            height: 88px;
+          }
+
+          @include mq(xs) {
+            width: 28% !important;
+            height: auto;
+          }
+
+          &.middle {
+            margin: 5px 30px;
+
+            @include mq(lg) {
+              margin: 5px 20px;
+            }
+
+            @include mq(md) {
+              margin: 5px 30px;
+            }
+
+            @include mq(xs) {
+              margin: 5px 8%;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          &:after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+          }
+
+          &:hover {
+
+            &:after {
+              display: block;
+            }
+
+            @include mq(s) {
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      p {
+        font-family: $fb, sans-serif;
+        font-size: 18px;
+        color: #fff;
+        padding-top: 35px;
+      }
+    }
+
+    &-img {
+      width: 675px;
+      position: relative;
+      z-index: 9;
+
+      @include mq(lg) {
+        width: 550px;
+      }
+
+      @include mq(md) {
+        @include order(1);
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      a {
+        outline: none;
+
+        img {
+          @include mq(lg) {
+            width: 100%;
+          }
+        }
+      }
+
+      .slick-list.draggable {
+        position: relative;
+        z-index: 9;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        @include box-sizing(border-box);
+        width: 675px;
+        height: 455px;
+        position: absolute;
+        top: 50px;
+        right: -80px;
+        border: 10px solid #e2e9c0;
+
+        @include mq(lg) {
+          width: 90%;
+          height: 100%;
+          right: 80px;
+          z-index: 2;
+        }
+
+        @include mq(md) {
+          width: 100%;
+          right: -80px;
+        }
+
+        @include mq(xs) {
+          border: 5px solid #e2e9c0;
+        }
+      }
+    }
+  }
+}
+
+.inform {
+  padding: 0 0 50px;
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    background: url("../img/info-block-bg.png") no-repeat center/cover;
+    @include flex;
+    @include justify-content(space-between);
+    @include border-radius(5px);
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      @include box-sizing(border-box);
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 345px;
+    }
+
+    @include mq(xs) {
+      width: 100%;
+      padding-bottom: 61%;
+    }
+
+    &-img {
+      position: relative;
+      width: 50%;
+      z-index: 9;
+
+      @include mq(md) {
+        @include order(2);
+        width: 100%;
+      }
+
+      .image {
+        position: absolute;
+        top: 35px;
+        left: -70px;
+
+        @include mq(lg) {
+          width: 560px;
+          top: 110px;
+          left: 0;
+        }
+
+        @include mq(md) {
+          left: 50%;
+          top: 0;
+          @include transform(translateX(-50%));
+        }
+
+        @include mq(xs) {
+          width: 100%;
+          left: -10px;
+          @include transform(none);
+        }
+
+        img {
+          @include mq(lg) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &-text {
+      padding: 60px 0 85px;
+      width: 50%;
+
+      @include mq(md) {
+        @include order(1);
+        width: 80%;
+        margin: 0 auto;
+        padding: 60px 0 40px;
+      }
+
+      @include mq(xs) {
+        padding: 20px 10px;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-inline-start: 30px;
+
+        @include mq(xs) {
+          padding-inline-start: 0;
+        }
+
+        li {
+          margin-bottom: 25px;
+
+          p {
+            font-family: $fb, sans-serif;
+            font-size: 18px;
+            color: #1e0f1c;
+
+            span {
+              font-family: $fd, sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__paralax {
+
+    &-first {
+      width: 126px;
+      height: 137px;
+      background: url("../img/paralax/inform-first.png") no-repeat center/cover;
+      position: absolute;
+      top: -30px;
+      left: 65px;
+
+      @include mq(md) {
+        top: -70px;
+        left: -5px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-second {
+      width: 179px;
+      height: 113px;
+      background: url("../img/paralax/inform-second.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -40px;
+      right: -50px;
+
+      @include mq(lg) {
+        right: 0;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+}
+
+.boots {
+  padding: 70px 0 160px;
+
+  @include mq(xs) {
+    overflow-x: hidden;
+  }
+
+  &__block {
+    position: relative;
+
+    &-info {
+      @include flex;
+      @include justify-content(space-between);
+      padding: 30px 0 20px;
+      background: #7aa95c;
+      position: relative;
+      z-index: 9;
+
+      @include mq(lg) {
+        padding: 30px 0;
+      }
+
+      @include mq(md) {
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include box-sizing(border-box);
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @include mq(s) {
+        width: 100%;
+      }
+
+      &-img {
+        padding: 0 20px 0 30px;
+        @include box-sizing(border-box);
+        width: 50%;
+        position: relative;
+        z-index: 9;
+
+        @include mq(md) {
+          width: 80%;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        @include mq(s) {
+          padding: 0;
+        }
+
+        @include mq(xs) {
+          width: 95%;
+          position: static;
+        }
+
+        .big-img {
+          width: 520px;
+          height: 316px;
+          margin-bottom: 5px;
+          position: relative;
+
+          @include mq(lg) {
+            width: 430px;
+            height: 265px;
+          }
+
+          @include mq(md) {
+            width: 100%;
+            height: 305px;
+            margin-bottom: 20px;
+          }
+
+          @include mq(s) {
+            height: 277px;
+            margin-bottom: 10px;
+          }
+
+          @include mq(xs) {
+            height: auto;
+            margin-bottom: 0;
+          }
+
+          a {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include mq(md) {
+              width: 100%;
+            }
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .small-img {
+
+          @include mq(xs) {
+            padding-top: 62%;
+          }
+
+          ul {
+            @include flex;
+            @include justify-content(space-between);
+
+            li {
+              width: 100px;
+              height: 61px;
+              position: relative;
+              cursor: pointer;
+
+              @include mq(lg) {
+                width: 80px;
+                height: 49px;
+              }
+
+              @include mq(md) {
+                width: 95px;
+                height: 56px;
+              }
+
+              @include mq(s) {
+                width: 85px;
+                height: 52px;
+              }
+
+              @include mq(xs) {
+                width: 19.5%;
+                height: auto;
+              }
+
+              img {
+                width: 100%;
+              }
+
+              &:after {
+                content: "";
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.5);
+              }
+
+              &:hover {
+
+                &:after {
+                  display: block;
+                }
+
+                @include mq(s) {
+
+                  &:after {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .flex {
+          @include flex;
+          @include align-items(flex-end);
+          margin-top: 45px;
+          padding-bottom: 35px;
+
+          @include mq(md) {
+            position: relative;
+            position: absolute;
+            top: 805px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            width: 500px;
+            margin: 0 auto;
+            padding: 0;
+          }
+
+          @include mq(s) {
+            width: 456px;
+            @include justify-content(space-between);
+            @include align-items(flex-start);
+            top: 775px;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+            max-width: 320px;
+            @include justify-content(flex-start);
+            top: 70%;
+            padding: 0 5px;
+            @include box-sizing(border-box);
+          }
+
+          .price {
+
+            @include mq(lg) {
+              width: 265px;
+            }
+
+            span.old-price {
+
+              @include mq(lg) {
+                font-size: 28px;
+              }
+
+              @include mq(xs) {
+                font-size: 24px;
+                color: #2f5218;
+              }
+            }
+
+            span.new-price {
+
+              @include mq(lg) {
+                font-size: 55px;
+              }
+
+              @include mq(xs) {
+                font-size: 48px;
+                line-height: 1;
+              }
+            }
+          }
+
+          .sale {
+            margin-left: 35px;
+
+            @include mq(lg) {
+              margin-left: 0;
+            }
+
+            @include mq(xs) {
+              position: absolute;
+              top: 0;
+              right: 5px;
+              font-size: 30px;
+            }
+
+            p {
+
+              @include mq(lg) {
+                font-size: 35px;
+              }
+            }
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 90px;
+          right: -25px;
+          width: 455px;
+          height: 451px;
+          background: url("../img/boots-block-img-bg.png") no-repeat center/cover;
+
+          @include mq(md) {
+            top: 235px;
+          }
+        }
+      }
+
+      &-text {
+        width: 50%;
+        position: relative;
+
+        @include mq(md) {
+          width: 80%;
+          margin: 0 auto;
+          padding: 20px 20px 0;
+          @include box-sizing(border-box);
+        }
+
+        @include mq(xs) {
+          width: 95%;
+          padding: 20px 0;
+        }
+
+        h3.title {
+          font-family: $fd, sans-serif;
+          font-size: 30px;
+          color: #fff;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 9;
+
+          @include mq(xs) {
+            font-size: 24px;
+          }
+
+          span {
+            display: inline-block;
+            margin: 0 15px;
+
+            @include mq(xs) {
+              margin: 0;
+            }
+          }
+        }
+
+        ul.list {
+          margin-top: 10px;
+          position: relative;
+          z-index: 9;
+
+          li {
+            @include flex;
+            margin-bottom: 10px;
+
+            >p {
+              font-family: $fb, sans-serif;
+              font-size: 18px;
+              color: #fff;
+
+              span {
+
+                &:first-child {
+                  font-family: $fd, sans-serif;
+                  color: #0d1d02;
+                  display: inline-block;
+                  width: 180px;
+                  margin-right: 50px;
+
+                  @include mq(lg) {
+                    margin-right: 20px;
+                  }
+
+                  @include mq(xs) {
+                    width: auto;
+                    margin-right: 5px;
+                  }
+                }
+
+                &.stile {
+                  color: #e2e9c0;
+                }
+              }
+            }
+
+            .flex {
+              @include flex;
+              @include flex-wrap(wrap);
+              @include justify-content(space-between);
+              width: 265px;
+
+              @include mq(s) {
+                width: 215px;
+              }
+
+              @include mq(xs) {
+                width: 175px;
+              }
+
+              p {
+                font-family: $fb, sans-serif;
+                font-size: 18px;
+                color: #fff;
+                margin: 0 0 2px;
+
+                span {
+                  color: #e2e9c0;
+                }
+              }
+            }
+
+            &:last-child {
+              >p {
+                font-family: $fd, sans-serif;
+                color: #0d1d02;
+                width: 180px;
+                margin-right: 50px;
+
+                @include mq(lg) {
+                  margin-right: 20px;
+                }
+
+                @include mq(xs) {
+                  width: auto;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+
+        .order {
+          @include flex;
+          width: 535px;
+          @include justify-content(space-between);
+          padding-top: 30px;
+          position: relative;
+
+          @include mq(lg) {
+            width: 480px;
+          }
+
+          @include mq(md) {
+            width: 100%;
+            @include flex-wrap(wrap);
+            @include justify-content(center);
+            padding-bottom: 90px;
+          }
+
+          @include mq(xs) {
+            padding-bottom: 70px;
+          }
+
+          .size {
+            width: 180px;
+
+            @include mq(md) {
+              width: 100%;
+              padding: 100px 0 40px;
+            }
+
+            p {
+              font-family: $fd, sans-serif;
+              font-size: 18px;
+              color: #0d1d02;
+            }
+
+            .flex {
+              @include flex;
+              @include flex-wrap(wrap);
+              @include justify-content(space-between);
+              margin-left: 50px;
+              padding-top: 5px;
+
+              @include mq(s) {
+                margin-left: 0;
+              }
+
+              input {
+                display: none;
+
+                &.checkbox:checked + label {
+                  background: #9dcd7e;
+                }
+
+                &.checkboxx:checked + label {
+                  background: #9dcd7e;
+                }
+              }
+
+              label {
+                cursor: pointer;
+                font-family: $fb, sans-serif;
+                font-size: 18px;
+                color: #fff;
+                @include border-radius(5px);
+                @include box-sizing(border-box);
+                width: 38px;
+                display: block;
+                text-align: center;
+                padding: 5px 0;
+                background: transparent;
+                margin: 0 0 2px;
+
+                &:hover {
+                  background: #9dcd7e;
+                }
+              }
+            }
+          }
+
+          form {
+            width: 285px;
+            position: relative;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            z-index: 9;
+
+            @include mq(md) {
+              top: 210px;
+              left: 50%;
+              @include transform(translateX(-50%));
+            }
+
+            label {
+              display: none;
+            }
+
+            input {
+              @include box-sizing(border-box);
+              background: #fff;
+              width: 279px;
+              font-family: $fb, sans-serif;
+              font-size: 16px;
+              color: #7aa95c;
+              outline: none;
+              padding: 9.5px 20px;
+              margin: 0 0 15px 0;
+            }
+
+            @include placeholder {
+              font-family: $fb, sans-serif;
+              font-size: 18px;
+              color: #7aa95c;
+              opacity: 1;
+              text-transform: uppercase;
+            }
+
+            button {
+              display: block;
+              @include box-sizing(border-box);
+              @include border-radius(5px);
+              width: 285px;
+              background: #ff4343;
+              font-family: $fb, sans-serif;
+              font-size: 36px;
+              color: #fff;
+              cursor: pointer;
+              outline: none;
+              border: none;
+              text-transform: uppercase;
+              padding: 8.5px;
+              margin: 70px 0 0;
+              position: relative;
+
+              &:after {
+                content: "";
+                display: none;
+                position: absolute;
+                top: 50%;
+                right: 35px;
+                @include transform(translateY(-50%));
+                width: 16px;
+                height: 26px;
+                background: url("../img/button-arrow.png") no-repeat center/cover;
+              }
+
+              &:hover {
+                color: #1e0f1c;
+                background: #ff2424;
+                text-align: left;
+                padding: 8.5px 0 8.5px 50px;
+
+                &:after {
+                  display: block;
+                }
+              }
+
+              @include mq(s) {
+                &:hover  {
+                  text-align: center;
+                  background: #ff4343;
+                  color: #fff;
+                  padding: 8.5px;
+
+                  &:after {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          @include transform(translateX(-50%));
+          width: 455px;
+          height: 451px;
+          background: url("../img/boots-block-text-bg.png") no-repeat center/cover;
+
+          @include mq(md) {
+            top: 320px;
+          }
+        }
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 30px;
+      left: -30px;
+      content: "";
+      width: 100%;
+      height: 100%;
+      @include box-sizing(border-box);
+      border: 10px solid #e2e9c0;
+
+      @include mq(md) {
+        width: 675px;
+        left: 0;
+      }
+
+      @include mq(s) {
+        width: 570px;
+        left: -20px;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+  }
+
+  &.second {
+    position: relative;
+
+    .container {
+      position: relative;
+    }
+
+    .boots__paralax-first {
+      width: 84px;
+      height: 134px;
+      background: url("../img/paralax/boots-first.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -120px;
+      left: 0;
+      z-index: 11;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    .boots__paralax-second {
+      width: 78px;
+      height: 68px;
+      background: url("../img/paralax/boots-second.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -135px;
+      left: 320px;
+      z-index: 11;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.why {
+  padding: 70px 0 100px;
+
+  @include mq(lg) {
+    padding: 70px 0 30px;
+  }
+
+  @include mq(md) {
+    padding: 30px 0;
+    overflow-x: hidden;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-between);
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+    }
+
+    &-text {
+      width: 610px;
+      padding-top: 75px;
+
+      @include mq(lg) {
+        width: 520px;
+      }
+
+      @include mq(md) {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 30px;
+      }
+
+      @include mq(s) {
+        width: 100%;
+        padding: 30px 10px 0;
+      }
+
+      @include mq(xs) {
+        padding: 30px 0 0;
+      }
+
+      p {
+        font-family: $fb, sans-serif;
+        font-size: 18px;
+        color: #fff;
+        width: 580px;
+
+        @include mq(lg) {
+          width: 500px;
+        }
+
+        @include mq(md) {
+          width: 100%;
+        }
+
+        @include mq(xs) {
+          text-align: justify;
+        }
+      }
+
+      .flex {
+        @include flex;
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        margin-left: 45px;
+
+        @include mq(lg) {
+          margin-left: 0;
+        }
+
+        @include mq(xs) {
+          margin-left: 20px;
+        }
+
+        figure {
+          @include flex;
+          @include align-items(flex-end);
+          margin: 50px 0;
+
+          @include mq(xs) {
+            margin: 25px 0;
+          }
+
+          .image {
+            @include box-sizing(border-box);
+            @include border-radius(5px);
+            background: #fff;
+            width: 74px;
+            height: 74px;
+            position: relative;
+
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include transform(translate(-50%, -50%));
+            }
+          }
+
+          p {
+            font-family: $fb, sans-serif;
+            font-size: 20px;
+            color: #fff;
+            margin-left: 10px;
+            width: 155px;
+          }
+        }
+      }
+    }
+
+    &-img {
+      width: 480px;
+      position: relative;
+      z-index: 9;
+
+      @include mq(lg) {
+        width: 430px;
+      }
+
+      @include mq(md) {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+
+      .image {
+        width: 506px;
+        height: 640px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../img/whywe-img.png") no-repeat center/cover;
+
+        @include mq(lg) {
+          width: 420px;
+          height: 554px;
+          left: 10px;
+        }
+
+        @include mq(md) {
+          position: static;
+          width: 506px;
+          height: 640px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &__paralax {
+
+    &-first {
+      width: 78px;
+      height: 68px;
+      background: url("../img/paralax/why-first.png") no-repeat center/cover;
+      position: absolute;
+      top: 255px;
+      left: -120px;
+
+      @include mq(s) {
+        width: 60px;
+        height: 50px;
+        top: -25px;
+        left: 0;
+      }
+    }
+
+    &-second {
+      width: 74px;
+      height: 90px;
+      background: url("../img/paralax/why-second.png")no-repeat center/cover;
+      position: absolute;
+      top: 600px;
+      left: 250px;
+
+      @include mq(lg) {
+        left: 190px;
+      }
+
+      @include mq(s) {
+        top: 500px;
+        left: -25px;
+        width: 55px;
+        height: 65px;
+      }
+    }
+
+    &-third {
+      width: 291px;
+      height: 301px;
+      background: url("../img/paralax/why-third.png") no-repeat center/cover;
+      position: absolute;
+      top: 40px;
+      left: 560px;
+
+      @include mq(md) {
+        left: 650px;
+      }
+
+      @include mq(s) {
+        width: 130px;
+        height: 145px;
+        top: -120px;
+        right: 0;
+        left: 85%;
+      }
+    }
+  }
+}
+
+.gallery {
+  padding: 40px 0 80px;
+
+  @include mq(s) {
+    overflow-x: hidden;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-between);
+
+    @include mq(md) {
+      @include align-items(center);
+    }
+
+    &-big {
+      width: 789px;
+      height: 478px;
+      position: relative;
+      z-index: 9;
+
+      @include mq(lg) {
+        width: 680px;
+        height: 412px;
+      }
+
+      @include mq(md) {
+        width: 520px;
+        height: 315px;
+      }
+
+      @include mq(s) {
+        width: 90%;
+        height: 310px;
+        margin: 0 auto;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+        height: auto;
+      }
+
+      .slick-list.draggable {
+        position: relative;
+        z-index: 9;
+      }
+
+      a {
+        outline: none;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      img.prev.slick-arrow {
+        bottom: -24px;
+
+        @include mq(xs) {
+          bottom: -17px;
+        }
+      }
+
+      img.next.slick-arrow {
+        bottom: -24px;
+
+        @include mq(xs) {
+          bottom: -17px;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: 80px;
+        width: 738px;
+        height: 469px;
+        border: 10px solid #e2e9c0;
+        background: transparent;
+
+        @include mq(lg) {
+          width: 610px;
+          height: 392px;
+        }
+
+        @include mq(md) {
+          @include box-sizing(border-box);
+          width: 100%;
+          height: 100%;
+        }
+
+        @include mq(xs) {
+          border: 5px solid #e2e9c0;
+        }
+      }
+    }
+
+    &-small {
+      width: 290px;
+      @include flex;
+      @include align-items(center);
+      position: relative;
+      z-index: 9;
+
+      @include mq(lg) {
+        width: 250px;
+      }
+
+      @include mq(md) {
+        width: 230px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+
+      .slick-list.draggable {
+        padding: 0 !important;
+      }
+
+      .slick-track {
+        width: 123px !important;
+        transform: translate3d(11px, 0px, 0px) !important;
+      }
+
+      .images {
+        width: 113px !important;
+        height: 75px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        position: relative;
+        outline: none;
+
+        @include mq(md) {
+          height: 58px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: none;
+        }
+
+        &:hover {
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      .logo {
+        width: 64px;
+        height: 348px;
+        background: url("../img/gallery-logo.png") no-repeat center/cover;
+        margin: 0 30px 0 75px;
+
+        @include mq(lg) {
+          margin: 0 30px;
+        }
+
+        @include mq(md) {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  &__paralax {
+
+    &-first {
+      width: 159px;
+      height: 133px;
+      background: url("../img/paralax/gallery-first.png") no-repeat center/cover;
+      position: absolute;
+      top: 35px;
+      left: -95px;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-second {
+      width: 58px;
+      height: 51px;
+      background: url("../img/paralax/gallery-second.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -35px;
+      left: -40px;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-third {
+      width: 94px;
+      height: 132px;
+      background: url("../img/paralax/gallery-third.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -70px;
+      left: 747px;
+
+      @include mq(lg) {
+        left: 650px;
+      }
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &-fourth {
+      width: 100px;
+      height: 118px;
+      background: url("../img/paralax/gallery-fourth.png") no-repeat center/cover;
+      position: absolute;
+      top: -15px;
+      right: 80px;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-fifth {
+      width: 58px;
+      height: 51px;
+      background: url("../img/paralax/gallery-fifth.png") no-repeat center/cover;
+      position: absolute;
+      bottom: 40px;
+      right: -50px;
+
+      @include mq(lg) {
+        bottom: -25px;
+        right: 0;
+      }
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.work {
+  padding: 70px 0 300px;
+  position: relative;
+
+  @include mq(md) {
+    padding: 90px 0 40px;
+  }
+
+  @include mq(s) {
+    overflow-x: hidden;
+    padding: 0;
+  }
+
+  .container {
+    position: relative;
+
+    @include mq(s) {
+      padding: 120px 0 80px;
+    }
+  }
+
+  &__block {
+    position: relative;
+    z-index: 9;
+
+    &-img {
+      background: url("../img/work-img.png") no-repeat center/cover;
+      @include box-sizing(border-box);
+      width: 537px;
+      margin-left: 130px;
+
+      @include mq(lg) {
+        margin-left: 30px;
+      }
+
+      @include mq(md) {
+        background: none;
+        width: 100%;
+        margin-left: 0;
+        position: absolute;
+        top: -95px;
+        left: 50%;
+        @include transform(translateX(-50%));
+      }
+
+      @include mq(s) {
+        position: relative;
+      }
+
+      .links {
+        padding: 80px 220px 210px 35px;
+
+        @include mq(md) {
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    &-text {
+      background: #e2e9c0;
+      @include box-sizing(border-box);
+      @include border-radius(5px);
+      padding: 30px;
+      width: 537px;
+      position: relative;
+      position: absolute;
+      top: 70px;
+      left: 490px;
+
+      @include mq(lg) {
+        left: 390px;
+      }
+
+      @include mq(md) {
+        position: static;
+        margin: 0 auto;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        padding: 10px 5px;
+      }
+
+      figure {
+        @include flex;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 9;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        p:first-child {
+          font-family: $feb, sans-serif;
+          font-size: 30px;
+          color: #a7001e;
+          width: 42px;
+          background: #fff;
+          text-align: center;
+          padding: 3px 0;
+          @include border-radius(5px);
+          @include box-sizing(border-box);
+          max-height: 42px;
+
+          @include mq(xs) {
+            min-width: 42px;
+          }
+        }
+
+        p:last-child {
+          font-family: $fb, sans-serif;
+          font-size: 20px;
+          color: #1e0f1c;
+          text-transform: uppercase;
+          margin-left: 30px;
+          width: 295px;
+          line-height: 1.1;
+
+          @include mq(xs) {
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        @include transform(translateY(-50%));
+        width: 331px;
+        height: 328px;
+        background: url("../img/work-block-text-bg.png") no-repeat center/cover;
+
+        @include mq(xs) {
+          right: 10px;
+          width: 204px;
+          height: 327px;
+        }
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    @include transform(translateX(-50%));
+
+    @include mq(lg) {
+      top: 10px;
+    }
+
+    @include mq(md) {
+      width: 90%;
+      top: -55px;
+    }
+
+    @include mq(s) {
+      width: 700px;
+      height: 500px;
+      top: 45px;
+    }
+
+    @include mq(xs) {
+      display: none;
+    }
+
+    img {
+      @include mq(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__paralax {
+
+    &-first {
+      width: 76px;
+      height: 146px;
+      background: url("../img/paralax/work-first.png") no-repeat center/cover;
+      position: absolute;
+      top: 15px;
+      left: -40px;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-second {
+      width: 205px;
+      height: 148px;
+      background: url("../img/paralax/work-second.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -250px;
+      left: -105px;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-third {
+      width: 198px;
+      height: 186px;
+      background: url("../img/paralax/work-third.png") no-repeat center/cover;
+      position: absolute;
+      top: 60px;
+      right: 0;
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &-fourth {
+      width: 134px;
+      height: 107px;
+      background: url("../img/paralax/work-fourth.png") no-repeat center/cover;
+      position: absolute;
+      bottom: -330px;
+      right: -80px;
+
+      @include mq(lg) {
+        right: 0;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+}
+
+.review {
+  padding: 40px 0 65px;
+  position: relative;
+
+  @include mq(s) {
+    padding: 0 0 65px;
+  }
+
+  @include mq(xs) {
+    overflow-x: hidden;
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+    }
+
+    &-text {
+      @include box-sizing(border-box);
+      width: 411px;
+      position: relative;
+      margin: 0 0 265px 40px;
+
+      @include mq(lg) {
+        margin: 0 0 265px 20px;
+      }
+
+      @include mq(md) {
+        width: 80%;
+        margin: 0 auto;
+        padding: 60px 0 0;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      .block {
+        padding: 20px 25px 60px;
+        background: #fff;
+        @include box-sizing(border-box);
+        width: 411px;
+        height: 308px;
+
+        @include mq(lg) {
+          padding: 20px 25px 80px;
+        }
+
+        @include mq(md) {
+          margin: 0 auto;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+          max-width: 320px;
+          height: 391px;
+          padding: 20px 10px;
+        }
+
+        p {
+          font-family: $fb, sans-serif;
+          font-size: 18px;
+          color: #1e0f1c;
+
+          @include mq(xs) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .flex {
+          @include flex;
+          @include align-items(flex-end);
+          @include justify-content(flex-end);
+
+          p {
+            font-family: $fb, sans-serif;
+            font-size: 20px;
+            color: #2f640e;
+            text-transform: uppercase;
+            margin-right: 10px;
+          }
+
+          .images {
+            width: 85px;
+            height: 81px;
+
+            img {
+              @include border-radius(5px);
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .owl-dots {
+        @include flex;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        @include transform(translateX(-50%));
+        z-index: 9;
+
+        @include mq(lg) {
+          left: 175px;
+        }
+
+        @include mq(md) {
+          top: 90%;
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
+
+        @include mq(xs) {
+          top: 92%;
+        }
+
+        .owl-dot {
+          width: 14px;
+          height: 14px;
+          margin: 0 5px;
+          @include box-sizing(border-box);
+          background: url("../img/owl-dot.png") no-repeat center/cover;
+
+          &.active {
+            background: url("../img/owl-dot-active.png") no-repeat center/cover;
+          }
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        width: 461px;
+        height: 471px;
+        background: url("../img/review-bg.png") no-repeat center/cover;
+
+        @include mq(lg) {
+          width: 400px;
+          height: 410px;
+          left: 50px;
+        }
+
+        @include mq(md) {
+          left: 150px;
+        }
+
+        @include mq(s) {
+          width: 430px;
+          height: 440px;
+          top: 90px;
+          left: 55%;
+          @include transform(translateX(-45%));
+        }
+
+        @include mq(xs) {
+          width: 461px;
+          height: 471px;
+          left: 50px;
+          @include transform(none);
+        }
+      }
+    }
+
+    &-photo {
+      padding: 0 5px;
+      @include flex;
+      @include flex-wrap(wrap);
+      @include box-sizing(border-box);
+      width: 50%;
+
+      @include mq(md) {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 220px;
+      }
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      a {
+        margin: 15px;
+        position: relative;
+        z-index: 9;
+
+        @include mq(lg) {
+          width: 48%;
+          margin: 15px auto;
+        }
+
+        img {
+          @include mq(lg) {
+            width: 100%;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 249px;
+          height: 322px;
+          background: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+          width: 42px;
+          height: 42px;
+          background: url("../img/plus.png") no-repeat center/cover;
+          display: none;
+          opacity: 1;
+        }
+
+        &:hover {
+
+          &:after, &:before {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: 42%;
+    @include transform(translateX(-42%) rotate(90deg));
+    width: 301px;
+    height: 196px;
+    background: url("../img/video-arrow.png") no-repeat center/cover;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,224 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+body {
+  background: #1e0f1c;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+
+  @include mq(lg) {
+    width: 960px;
+  }
+
+  @include mq(md) {
+    width: 750px;
+  }
+
+  @include mq(s) {
+    width: 570px;
+  }
+
+  @include mq(xs) {
+    width: 94%;
+    padding: 0 3%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+h1.title {
+  font-family: $fd, sans-serif;
+  font-size: 72px;
+  color: #fff;
+  text-transform: uppercase;
+
+  @include mq(xs) {
+    font-size: 30px;
+  }
+
+  span {
+    display: block;
+    font-family: $fb, sans-serif;
+    font-size: 36px;
+
+    @include mq(xs) {
+      font-size: 20px;
+    }
+  }
+}
+
+
+.price {
+
+  span.old-price {
+    position: relative;
+    font-family: $fb, sans-serif;
+    font-size: 30px;
+    color: #130111;
+    display: inline-block;
+    text-transform: uppercase;
+
+    @include mq(xs) {
+      font-size: 18px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #130111;
+    }
+  }
+
+  span.new-price {
+    font-family: $fd, sans-serif;
+    font-size: 60px;
+    color: #ffdd1e;
+    display: block;
+    text-transform: uppercase;
+    line-height: 0.7;
+
+    @include mq(xs) {
+      font-size: 40px;
+    }
+  }
+}
+
+.sale {
+
+  p {
+    font-family: $fb, sans-serif;
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include mq(xs) {
+      font-size: 30px;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+.links {
+
+  a.link {
+    display: inline-block;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
+    background: #df52cd;
+    width: 286px;
+    font-family: $fb, sans-serif;
+    font-size: 36px;
+    color: #fefefe;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6.5px 52px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      @include transform(translateY(-50%));
+      width: 16px;
+      height: 26px;
+      background: url("../img/link-arrow.png") no-repeat center/cover;
+    }
+
+    &:hover {
+      background: #ff87ef;
+      color: #5a2453;
+      text-align: left;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.owl-stage-outer {
+  z-index: 9;
+}
+
+img.prev.slick-arrow {
+  position: absolute;
+  bottom: -24px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 11;
+
+  @include mq(lg) {
+    bottom: 2px;
+  }
+
+  @include mq(md) {
+    bottom: -24px;
+  }
+
+  @include mq(xs) {
+    width: 34px;
+    height: 34px;
+    bottom: -17px;
+  }
+}
+
+img.next.slick-arrow {
+  @include transform(scale(-1, 1));
+  position: absolute;
+  bottom: -24px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 11;
+
+  @include mq(lg) {
+    bottom: 2px;
+  }
+
+  @include mq(md) {
+    bottom: -24px;
+  }
+
+  @include mq(xs) {
+    width: 34px;
+    height: 34px;
+    bottom: -17px;
+  }
+}
+
+.active2 {
+  display: block !important;
+}
+
+.remodal {
+
+  p {
+    font-family: $a, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+  }
+}

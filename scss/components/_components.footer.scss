@@ -1,0 +1,272 @@
+.footer {
+  background: #5a2453;
+  padding: 20px 0 0;
+
+  .container {
+    position: relative;
+  }
+
+  &__block {
+    background: #fff;
+    padding: 30px 20px 0;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
+    @include flex;
+    @include justify-content(space-between);
+    margin: -40px auto 0;
+
+    @include mq(md) {
+      width: 90%;
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      padding: 30px 20px 175px;
+    }
+
+    @include mq(s) {
+      padding: 30px 20px 125px;
+    }
+
+    @include mq(xs) {
+      width: 100%;
+      padding: 30px 5px 125px;
+      position: relative;
+    }
+
+    &-text {
+      width: 720px;
+      position: relative;
+
+      @include mq(md) {
+        width: 100%;
+      }
+
+      h2.title {
+        font-family: $fd, sans-serif;
+        font-size: 60px;
+        color: #1e0f1c;
+        text-transform: uppercase;
+        line-height: 1;
+
+        @include mq(md) {
+          text-align: center;
+        }
+
+        @include mq(xs) {
+          font-size: 30px;
+          max-width: 320px;
+          margin: 0 auto;
+        }
+
+        span {
+          font-family: $fb, sans-serif;
+          font-size: 30px;
+          display: block;
+
+          @include mq(xs) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .price {
+        margin-top: 60px;
+        padding-bottom: 275px;
+
+        @include mq(md) {
+          margin: 20px 0 0 50px;
+          padding-bottom: 0;
+        }
+
+        @include mq(s) {
+          margin: 20px 0 0;
+        }
+
+        @include mq(xs) {
+
+          span.new-price {
+            line-height: 1;
+          }
+        }
+      }
+
+      .sale {
+        width: 210px;
+        position: absolute;
+        top: 120px;
+        left: 110%;
+
+        @include mq(md) {
+          position: static;
+          width: 100%;
+          text-align: right;
+          margin-right: 20px;
+        }
+
+        p {
+          color: #ff4444;
+        }
+      }
+
+      .links {
+        position: absolute;
+        top: 120px;
+        left: 290px;
+
+        @include mq(md) {
+          position: static;
+          margin: 40px auto;
+          text-align: center;
+        }
+
+        @include mq(s) {
+          margin: 40px auto;
+        }
+
+        @include mq(xs) {
+          margin: 20px auto;
+        }
+      }
+
+      .image {
+        position: absolute;
+        bottom: -25px;
+        left: 35px;
+
+        @include mq(md) {
+          position: static;
+          margin: 0 auto;
+        }
+
+        @include mq(s) {
+          width: 100%;
+        }
+
+        img {
+
+          @include mq(s) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &-img {
+      width: 300px;
+      position: relative;
+      z-index: 9;
+
+      @include mq(md) {
+        width: 100%;
+      }
+
+      @include mq(xs) {
+        position: static;
+      }
+
+      .image {
+        position: absolute;
+        top: 185px;
+        left: -225px;
+
+        @include mq(lg) {
+          width: 405px;
+          height: 225px;
+          left: -115px;
+        }
+
+        @include mq(md) {
+          width: 599px;
+          top: -120px;
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
+
+        @include mq(s) {
+          width: 100%;
+          top: -110px;
+        }
+
+        @include mq(xs) {
+          top: 70%;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__polit {
+    @include flex;
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    padding: 11.5px 0;
+    position: relative;
+    z-index: 9;
+
+    @include mq(lg) {
+      padding: 31px 0 11px;
+    }
+
+    @include mq(xs) {
+      padding: 15% 0 11px;
+    }
+
+    a {
+      display: block;
+      font-family: $fb, sans-serif;
+      font-size: 14px;
+      color: #210c1e;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      font-family: $fb, sans-serif;
+      font-size: 14px;
+      color: #210c1e;
+      margin: 0 10px;
+
+      &:last-child {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__paralax {
+
+    &-first {
+      width: 618px;
+      height: 180px;
+      background: url("../img/paralax/footer-first.png") no-repeat center/cover;
+      position: absolute;
+      top: 190px;
+      right: -80px;
+
+      @include mq(lg) {
+        display: none;
+      }
+    }
+
+    &-second {
+      width: 167px;
+      height: 99px;
+      background: url("../img/paralax/footer-second.png") no-repeat center/cover;
+      position: absolute;
+      top: -40px;
+      right: -90px;
+
+      @include mq(lg) {
+        right: 0;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+}
